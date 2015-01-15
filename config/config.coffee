@@ -9,7 +9,15 @@ config =
       name: 'wantedpixel-backend'
     port: 3000
     db: 'mongodb://localhost/wantedpixel-backend-development'
-    
+    email:
+      smtpServer:
+        service: 'Gmail'
+        auth:
+          user: "###"
+          pass: "###"
+      defaultMailOptions:
+        from: 'Wantedpixel<contact@wantedpixel.com>'
+        subject: 'Hello'
 
   test:
     root: rootPath
@@ -17,6 +25,15 @@ config =
       name: 'wantedpixel-backend'
     port: 3000
     db: 'mongodb://localhost/wantedpixel-backend-test'
+    email:
+      smtpServer:
+        service: 'Gmail'
+        auth:
+          user: "###"
+          pass: "###"
+      defaultMailOptions:
+        from: 'Wantedpixel<contact@wantedpixel.com>'
+        subject: 'Hello'
     
 
   production:
@@ -25,6 +42,15 @@ config =
       name: 'wantedpixel-backend'
     port: 3000
     db: 'mongodb://localhost/wantedpixel-backend-production'
+    email:
+      smtpServer:
+        service: 'Gmail'
+        auth:
+          user: "###"
+          pass: "###"
+      defaultMailOptions:
+        from: 'Wantedpixel<contact@wantedpixel.com>'
+        subject: 'Hello'
     
 
 module.exports = config[env]
