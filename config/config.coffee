@@ -17,7 +17,8 @@ config =
           pass: "###"
       defaultMailOptions:
         from: 'Wantedpixel<contact@wantedpixel.com>'
-        subject: 'Hello'
+        subject: 'Message from wantedpixel.com visitor'
+    corsWhitelist: 'http://localhost:9000'    
 
   test:
     root: rootPath
@@ -33,8 +34,10 @@ config =
           pass: "###"
       defaultMailOptions:
         from: 'Wantedpixel<contact@wantedpixel.com>'
-        subject: 'Hello'
-    
+        subject: 'Message from wantedpixel.com visitor'
+    corsWhitelist: 'http://localhost:9000'
+
+
 
   production:
     root: rootPath
@@ -50,7 +53,9 @@ config =
           pass: "###"
       defaultMailOptions:
         from: 'Wantedpixel<contact@wantedpixel.com>'
-        subject: 'Hello'
-    
+        subject: 'Message from wantedpixel.com visitor'
+    corsWhitelist: 'http://localhost:9000'
+
+
 
 module.exports = config[env]

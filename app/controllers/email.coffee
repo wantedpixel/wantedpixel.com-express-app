@@ -7,16 +7,22 @@ email = express.Router()
 module.exports = (app) ->
   app.use '/mail', email
 
-email.get '/', (req, res, next) ->
-  smtpTrans = nodemailer.createTransport config.email.smtpServer
+email.use (req, res, next) ->
+  res.header("Access-Control-Allow-Origin", config.corsWhitelist)
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+  next()
 
+email.post '/', (req, res, next) ->
+  smtpTrans = nodemailer.createTransport config.email.smtpServer
   mailOptions = _.extend
     to: 'spiros@wantedpixel.com'
-    text: 'Hello world ✔'
+    text: 'Name: ' + req.body.firstName + ' ' + req.body.lastName + '\n' +
+          'Email: ' + req.body.email + '\n' +
+          'Message: ' + req.body.message
     config.email.defaultMailOptions
 
   smtpTrans.sendMail(mailOptions, (error, info) ->
     if(error) then console.log(error) else console.log('Message sent: ' + info.response)
     smtpTrans.close()
   )
-  res.send('hello world');
+  res.send('mail sent');
