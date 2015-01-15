@@ -22,7 +22,6 @@ email.post '/', (req, res, next) ->
     config.email.defaultMailOptions
 
   smtpTrans.sendMail(mailOptions, (error, info) ->
-    if(error) then console.log(error) else console.log('Message sent: ' + info.response)
     smtpTrans.close()
+    if(error) then res.status(500).send() else res.status(200).send()
   )
-  res.send('mail sent');
