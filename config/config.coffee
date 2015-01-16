@@ -8,7 +8,7 @@ config =
     app:
       name: 'wantedpixel-backend'
     port: 3010
-    db: 'mongodb://wantedsi_mongoadmin:taponnyag4@localhost:20954'
+    db: 'mongodb://###:###@localhost:20954'
     email:
       smtpServer:
         service: 'Gmail'
@@ -25,7 +25,7 @@ config =
     app:
       name: 'wantedpixel-backend'
     port: 3000
-    db: 'mongodb://localhost/wantedpixel-backend-test'
+    db: 'mongodb://###:###@localhost:20954'
     email:
       smtpServer:
         service: 'Gmail'
@@ -44,7 +44,7 @@ config =
     app:
       name: 'wantedpixel-backend'
     port: 3000
-    db: 'mongodb://wantedsi_mongoadmin:taponnyag4@localhost:20954/wantedpixel-backend-production'
+    db: 'mongodb://###:###@localhost:20954'
     email:
       smtpServer:
         service: 'Gmail'
