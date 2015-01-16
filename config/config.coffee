@@ -7,8 +7,8 @@ config =
     root: rootPath
     app:
       name: 'wantedpixel-backend'
-    port: 3000
-    db: 'mongodb://localhost/wantedpixel-backend-development'
+    port: 3010
+    db: 'mongodb://wantedsi_mongoadmin:taponnyag4@localhost:20954'
     email:
       smtpServer:
         service: 'Gmail'
@@ -44,7 +44,7 @@ config =
     app:
       name: 'wantedpixel-backend'
     port: 3000
-    db: 'mongodb://localhost/wantedpixel-backend-production'
+    db: 'mongodb://wantedsi_mongoadmin:taponnyag4@localhost:20954/wantedpixel-backend-production'
     email:
       smtpServer:
         service: 'Gmail'
