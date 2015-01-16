@@ -4,3 +4,4 @@ public/components
 .idea
 public
 config.coffee
+daemon-script
