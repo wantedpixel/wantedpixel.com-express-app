@@ -7,50 +7,35 @@ config =
     root: rootPath
     app:
       name: 'wantedpixel-backend'
-    port: 3010
-    db: 'mongodb://###:###@localhost:20954'
+    port: 3000
+    db: 'mongodb://localhost/wantedpixel-backend-development'
     email:
       smtpServer:
-        service: 'Gmail'
+        host: '###'
+        port: 587
         auth:
           user: "###"
           pass: "###"
+      sendTo: 'contact@wantedpixel.com'
       defaultMailOptions:
         from: 'Wantedpixel<contact@wantedpixel.com>'
         subject: 'Message from wantedpixel.com visitor'
     corsWhitelist: 'http://localhost:9000'    
 
-  test:
-    root: rootPath
-    app:
-      name: 'wantedpixel-backend'
-    port: 3000
-    db: 'mongodb://###:###@localhost:20954'
-    email:
-      smtpServer:
-        service: 'Gmail'
-        auth:
-          user: "###"
-          pass: "###"
-      defaultMailOptions:
-        from: 'Wantedpixel<contact@wantedpixel.com>'
-        subject: 'Message from wantedpixel.com visitor'
-    corsWhitelist: 'http://localhost:9000'
-
-
-
   production:
     root: rootPath
     app:
       name: 'wantedpixel-backend'
-    port: 3000
+    port: 3010
     db: 'mongodb://###:###@localhost:20954'
     email:
       smtpServer:
-        service: 'Gmail'
+        host: '###'
+        port: 587
         auth:
           user: "###"
           pass: "###"
+      sendTo: 'contact@wantedpixel.com'
       defaultMailOptions:
         from: 'Wantedpixel<contact@wantedpixel.com>'
         subject: 'Message from wantedpixel.com visitor'

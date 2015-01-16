@@ -15,7 +15,7 @@ email.use (req, res, next) ->
 email.post '/', (req, res, next) ->
   smtpTrans = nodemailer.createTransport config.email.smtpServer
   mailOptions = _.extend
-    to: 'spiros@wantedpixel.com'
+    to: config.email.sendTo
     text: 'Name: ' + req.body.firstName + ' ' + req.body.lastName + '\n' +
           'Email: ' + req.body.email + '\n' +
           'Message: ' + req.body.message
